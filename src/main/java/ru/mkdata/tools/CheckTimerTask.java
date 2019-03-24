@@ -7,7 +7,6 @@ public class CheckTimerTask extends TimerTask {
 
     public void run() {
         boolean s = ApiConnector.setIP();
-        System.out.println(s);
-        System.exit(0);
+        System.out.println(s + "  " + ApiConnector.getExtIP());
     }
 }
