@@ -11,10 +11,15 @@ public class Request {
     public static String Api_Key = "cb4decb166961a75f3296c950c8d2d9a771c5";
     public static String Email = "mihsa2001@gmail.com";
 
-    public static String sendGet(final String url) throws IOException {
+    public static String sendGet(final String url,boolean useHeaders) throws IOException {
             URL obj = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
             connection.setRequestMethod("GET");
+            if (useHeaders) {
+                connection.setRequestProperty("X-Auth-Key", Api_Key);
+                connection.setRequestProperty("X-Auth-Email", Email);
+                connection.setRequestProperty("Content-Type", "application/json");
+            }
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
             StringBuffer response = new StringBuffer();

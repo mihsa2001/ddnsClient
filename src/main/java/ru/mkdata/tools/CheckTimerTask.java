@@ -6,7 +6,8 @@ import java.util.TimerTask;
 public class CheckTimerTask extends TimerTask {
 
     public void run() {
-        boolean s = ApiConnector.setIP();
-        System.out.println(s + "  " + ApiConnector.getExtIP());
+        if (!ApiConnector.getDetails().contains(ApiConnector.getExtIP())){
+            System.out.println(ApiConnector.setIP());
+        }else System.out.println(false);
     }
 }
