@@ -4,7 +4,10 @@ import java.io.IOException;
 import java.util.TimerTask;
 
 public class CheckTimerTask extends TimerTask {
+
     public void run() {
-        //String ip = Request.sendGet("http://icanhazip.com");
+        boolean s = ApiConnector.setIP();
+        System.out.println(s);
+        System.exit(0);
     }
 }
