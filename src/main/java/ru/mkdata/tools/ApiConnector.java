@@ -20,7 +20,10 @@ public class ApiConnector {
         try {
             String state = Request.sendPUT("https://api.cloudflare.com/client/v4/zones/911c894f957a627325c57da6fb21a317/dns_records/a2aa32a2656df55a236b3e38c9c5cdff",
                     "{\"type\":\"A\",\"name\":\"direct.mkdata.ru\",\"content\":\"" + getExtIP() + "\",\"ttl\":1,\"proxied\":false}");
-            if (state.contains("success")) return true;
+            if (state.contains("success")) {
+                Logger.info("success" + getExtIP());
+                return true;
+            }
             Logger.error(state);
         } catch (IOException e) {
             Logger.error(e.toString());
