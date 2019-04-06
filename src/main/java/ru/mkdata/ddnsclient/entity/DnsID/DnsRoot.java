@@ -1,5 +1,7 @@
-package ru.mkdata.entity.DnsID;
-
+package ru.mkdata.ddnsclient.entity.DnsID;
+/**
+ * @author Mikhail Klimov
+ */
 import java.util.List;
 
 public class DnsRoot {

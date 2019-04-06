@@ -1,5 +1,7 @@
-package ru.mkdata.entity.ZoneID;
-
+package ru.mkdata.ddnsclient.entity.ZoneID;
+/**
+ * @author Mikhail Klimov
+ */
 import java.util.List;
 
 public class ZoneRoot {

@@ -1,8 +1,12 @@
-package ru.mkdata.tools;
+package ru.mkdata.ddnsclient.tools;
 
 import org.pmw.tinylog.Logger;
 
 import java.util.TimerTask;
+
+/**
+ * @author Mikhail Klimov
+ */
 
 public class CheckTimerTask extends TimerTask {
 

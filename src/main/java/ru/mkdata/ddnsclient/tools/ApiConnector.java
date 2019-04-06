@@ -1,12 +1,16 @@
-package ru.mkdata.tools;
+package ru.mkdata.ddnsclient.tools;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.pmw.tinylog.Logger;
-import ru.mkdata.entity.DnsID.DnsRoot;
-import ru.mkdata.entity.ZoneID.ZoneRoot;
+import ru.mkdata.ddnsclient.entity.DnsID.DnsRoot;
+import ru.mkdata.ddnsclient.entity.ZoneID.ZoneRoot;
 
 import java.io.IOException;
+
+/**
+ * @author Mikhail Klimov
+ */
 
 public class ApiConnector {
 
@@ -73,7 +77,7 @@ public class ApiConnector {
             String state = Request.sendPUT("https://api.cloudflare.com/client/v4/zones/" + zoneId + "/dns_records/" + dnsId,
                     "{\"type\":\"A\",\"name\":\"" + subDomain + "\",\"content\":\"" + getExtIP() + "\",\"ttl\":1,\"proxied\":false}");
             if (state.contains("success")) {
-                Logger.info("success" + "" + getExtIP());
+                Logger.info("success " + getExtIP());
                 return true;
             }
             Logger.error(state);

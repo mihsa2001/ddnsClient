@@ -1,12 +1,16 @@
-package ru.mkdata;
+package ru.mkdata.ddnsclient;
 
 import com.google.devtools.common.options.OptionsParser;
-import ru.mkdata.tools.ApiConnector;
-import ru.mkdata.tools.CheckTimerTask;
-import ru.mkdata.tools.Options;
-import ru.mkdata.tools.Request;
+import ru.mkdata.ddnsclient.tools.ApiConnector;
+import ru.mkdata.ddnsclient.tools.CheckTimerTask;
+import ru.mkdata.ddnsclient.tools.Options;
+import ru.mkdata.ddnsclient.tools.Request;
 
 import java.util.Timer;
+
+/**
+ * @author Mikhail Klimov
+ */
 
 public class Main {
 

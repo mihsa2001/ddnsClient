@@ -1,5 +1,8 @@
-package ru.mkdata.entity.DnsID;
+package ru.mkdata.ddnsclient.entity.DnsID;
 
+/**
+ * @author Mikhail Klimov
+ */
 public class DnsResult {
     private String id;
 

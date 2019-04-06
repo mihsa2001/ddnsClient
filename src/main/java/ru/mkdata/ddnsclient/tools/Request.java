@@ -1,4 +1,4 @@
-package ru.mkdata.tools;
+package ru.mkdata.ddnsclient.tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,14 +7,18 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * @author Mikhail Klimov
+ */
+
 public class Request {
     public static String Api_Key;
     public static String Email;
 
     public static String sendApiGet(final String url) throws IOException {
-            URL obj = new URL(url);
-            HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
-            connection.setRequestMethod("GET");
+        URL obj = new URL(url);
+        HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
+        connection.setRequestMethod("GET");
         connection.setRequestProperty("X-Auth-Key", Api_Key);
         connection.setRequestProperty("X-Auth-Email", Email);
         connection.setRequestProperty("Content-Type", "application/json");

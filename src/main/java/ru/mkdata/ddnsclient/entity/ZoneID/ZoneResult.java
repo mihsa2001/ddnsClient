@@ -1,5 +1,8 @@
-package ru.mkdata.entity.ZoneID;
+package ru.mkdata.ddnsclient.entity.ZoneID;
 
+/**
+ * @author Mikhail Klimov
+ */
 public class ZoneResult {
     private String id;
 

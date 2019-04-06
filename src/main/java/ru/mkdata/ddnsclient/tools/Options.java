@@ -1,7 +1,11 @@
-package ru.mkdata.tools;
+package ru.mkdata.ddnsclient.tools;
 
 import com.google.devtools.common.options.Option;
 import com.google.devtools.common.options.OptionsBase;
+
+/**
+ * @author Mikhail Klimov
+ */
 
 public class Options extends OptionsBase {
     @Option(
